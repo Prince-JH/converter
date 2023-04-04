@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+
+<body>
+<h1>Json to DTO Converter</h1>
+
+<!-- enctype을 꼭 다음과 같이 해주어야 한다. -->
+<form action='/' method="get">
+    {% csrf_token %}
+    <p><textarea cols="200" rows="30" name="content" placeholder="json format"></textarea></p>
+<!--    <input type="text" cols="200" rows="30" name="content" placeholder="json format">-->
+    <input type="submit" value="convert">
+</form>
+<div>
+    <p><textarea cols="200" rows="30" name="answer" placeholder="DTO">{{ answer }}</textarea></p>
+</div>
+</body>
+</html>
